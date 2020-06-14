@@ -132,6 +132,11 @@ void timer::ListCleanup()
 	} while (taskCleanupStarted);
 }
 
+void timer::join()
+{
+	timerRunner.join();
+}
+
 namespace timer_service
 {
 timer timer_;

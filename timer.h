@@ -75,6 +75,7 @@ private:
 public:
 	timer();
 	~timer();
+	void join();
 
 	template <class callable, class... Args> unsigned long schedule(unsigned long &&ms, bool &&repeat, callable &&f, Args &&... args)
 	{
